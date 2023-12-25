@@ -38,7 +38,7 @@ class LoginController extends GetxController {
         Get.snackbar("Selamat", "Login sukses");
         prefs = await SharedPreferences.getInstance();
         await prefs.setString('username', token.toString());
-        Get.toNamed(Routes.HOME_PAGE);
+        Get.toNamed(Routes.BOTTOM_NAVBAR);
         isSuccess.value = true;
       } else {
         // Menampilkan Snackbar

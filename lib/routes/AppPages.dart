@@ -1,3 +1,4 @@
+import 'package:calculator_app_flutter/pages/arithmetic_page/binding/arithmetic_binding.dart';
 import 'package:calculator_app_flutter/pages/bmi_page/binding/bmi_binding.dart';
 import 'package:get/get.dart';
 
@@ -9,14 +10,13 @@ import '../pages/login_page/binding/Login_binding.dart';
 import '../pages/login_page/view/login_page.dart';
 import '../pages/navigator_page/binding/navbar_binding.dart';
 import '../pages/navigator_page/view/navbar_page.dart';
-import '../pages/onboarding_page/binding/onboard_binding.dart';
-import '../pages/onboarding_page/view/onboard_view.dart';
+
 part 'AppRoutes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.BOTTOM_NAVBAR;
+  static const INITIAL = Routes.SPLASH_PAGE;
 
   static final routes = [
     GetPage(
@@ -31,12 +31,6 @@ class AppPages {
         transition: Transition.fadeIn,
         transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
-        name: _Paths.ONBOARDING_PAGE,
-        page: () => OnBoarding(),
-        binding: OnBoardingBinding(),
-        transition: Transition.fadeIn,
-        transitionDuration: const Duration(milliseconds: 1500)),
-    GetPage(
         name: _Paths.SPLASH_PAGE,
         page: () => SplashPage(),
         transition: Transition.fadeIn,
@@ -50,7 +44,7 @@ class AppPages {
     GetPage(
         name: _Paths.ARITHMETIC_PAGE,
         page: () => CalculatorApp(),
-        binding: OnBoardingBinding(),
+        binding: ArithmeticBinding(),
         transition: Transition.fadeIn,
         transitionDuration: const Duration(milliseconds: 1500)),
     GetPage(

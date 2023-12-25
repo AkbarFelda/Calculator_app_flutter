@@ -10,6 +10,6 @@ class SplashController extends GetxController {
 
   void startTimer() async {
     await Future.delayed(Duration(seconds: 4));
-    Get.toNamed(Routes.ONBOARDING_PAGE);
+    Get.offNamed(Routes.LOGIN_PAGE);
   }
 }
