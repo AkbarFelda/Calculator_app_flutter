@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-
 class CalculateBMI extends StatefulWidget {
   const CalculateBMI({Key? key}) : super(key: key);
 
@@ -18,10 +17,17 @@ class _CalculateBMIState extends State<CalculateBMI> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    ctrBeratBadan = new TextEditingController();
-    ctrTinggiBadan = new TextEditingController();
+    ctrBeratBadan = TextEditingController();
+    ctrTinggiBadan = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    // Panggil dispose pada TextEditingController di sini
+    ctrBeratBadan.dispose();
+    ctrTinggiBadan.dispose();
+    super.dispose();
   }
 
   Widget textField(
@@ -52,18 +58,21 @@ class _CalculateBMIState extends State<CalculateBMI> {
               textField("Masukkan Berat Badan", false, ctrBeratBadan),
               textField("Masukkan Tinggi Badan", false, ctrTinggiBadan),
               ElevatedButton(
-                  onPressed: () => controller.calculateBMI(
-                      double.parse(ctrBeratBadan.text),
-                      double.parse(ctrTinggiBadan.text)),
-                  child: Text("calculate")),
+                onPressed: () => controller.calculateBMI(
+                  double.parse(ctrBeratBadan.text),
+                  double.parse(ctrTinggiBadan.text),
+                ),
+                child: Text("calculate"),
+              ),
               Obx(
-                    () => Text(
+                () => Text(
                   "Hasil BMI: " + controller.hasilBMI.value.toStringAsFixed(2),
                 ),
               ),
               Obx(
-                    () => Text(
-                  "Hasil Kategori BMI: " + controller.BMICategory.value.toString(),
+                () => Text(
+                  "Hasil Kategori BMI: " +
+                      controller.BMICategory.value.toString(),
                 ),
               ),
               // Button clear

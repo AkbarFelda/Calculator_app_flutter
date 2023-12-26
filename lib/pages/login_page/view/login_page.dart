@@ -5,12 +5,7 @@ import '../../../utils/custom_themes.dart';
 import '../../../utils/images.dart';
 import '../controller/login_controller.dart';
 
-class LoginPage extends StatefulWidget {
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
+class LoginPage extends StatelessWidget {
   final LoginController loginController = Get.put(LoginController());
 
   Widget myText(

@@ -1,15 +1,15 @@
 import 'package:calculator_app_flutter/pages/arithmetic_page/binding/arithmetic_binding.dart';
+import 'package:calculator_app_flutter/pages/arithmetic_page/view/arithmetic_page.dart';
 import 'package:calculator_app_flutter/pages/bmi_page/binding/bmi_binding.dart';
-import 'package:get/get.dart';
+import 'package:calculator_app_flutter/pages/bmi_page/view/bmi_page.dart';
+import 'package:calculator_app_flutter/pages/home_page/view/home_page.dart';
+import 'package:calculator_app_flutter/pages/login_page/binding/Login_binding.dart';
+import 'package:calculator_app_flutter/pages/login_page/view/login_page.dart';
+import 'package:calculator_app_flutter/pages/navigator_page/binding/navbar_binding.dart';
+import 'package:calculator_app_flutter/pages/navigator_page/view/navbar_page.dart';
+import 'package:calculator_app_flutter/pages/splash_page/view/splash_page.dart';
 
-import '../pages/Splash_page/view/splash_page.dart';
-import '../pages/arithmetic_page/view/arithmetic_page.dart';
-import '../pages/bmi_page/view/bmi_page.dart';
-import '../pages/home_page/view/home_page.dart';
-import '../pages/login_page/binding/Login_binding.dart';
-import '../pages/login_page/view/login_page.dart';
-import '../pages/navigator_page/binding/navbar_binding.dart';
-import '../pages/navigator_page/view/navbar_page.dart';
+import 'package:get/get.dart';
 
 part 'AppRoutes.dart';
 
